@@ -412,6 +412,8 @@ public:
     KResultOr<int> sys$anon_create(size_t, int options);
     KResultOr<int> sys$statvfs(Userspace<const Syscall::SC_statvfs_params*> user_params);
     KResultOr<int> sys$fstatvfs(int fd, statvfs* buf);
+    KResultOr<int> sys$kqueue();
+    KResultOr<int> sys$kevent(Userspace<const Syscall::SC_kevent_params*>);
 
     template<bool sockname, typename Params>
     int get_sock_or_peer_name(const Params&);

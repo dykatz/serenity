@@ -39,6 +39,7 @@ set(LIBC_SOURCES
     strings.cpp
     stubs.cpp
     syslog.cpp
+    sys/event.cpp
     sys/mman.cpp
     sys/prctl.cpp
     sys/ptrace.cpp

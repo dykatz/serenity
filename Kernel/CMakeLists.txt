@@ -80,6 +80,7 @@ set(KERNEL_SOURCES
     Storage/RamdiskDevice.cpp
     Storage/StorageManagement.cpp
     DoubleBuffer.cpp
+    EventQueue.cpp
     FileSystem/AnonymousFile.cpp
     FileSystem/BlockBasedFileSystem.cpp
     FileSystem/Custody.cpp
@@ -166,6 +167,7 @@ set(KERNEL_SOURCES
     Syscalls/ioctl.cpp
     Syscalls/keymap.cpp
     Syscalls/kill.cpp
+    Syscalls/kqueue.cpp
     Syscalls/link.cpp
     Syscalls/lseek.cpp
     Syscalls/mkdir.cpp

@@ -16,6 +16,7 @@
 constexpr int syscall_vector = 0x82;
 
 extern "C" {
+struct kevent;
 struct pollfd;
 struct timeval;
 struct timespec;
@@ -180,7 +181,9 @@ namespace Kernel {
     S(readv)                      \
     S(emuctl)                     \
     S(statvfs)                    \
-    S(fstatvfs)
+    S(fstatvfs)                   \
+    S(kqueue)                     \
+    S(kevent)
 
 namespace Syscall {
 
@@ -464,6 +467,15 @@ struct SC_inode_watcher_add_watch_params {
 struct SC_statvfs_params {
     StringArgument path;
     struct statvfs* buf;
+};
+
+struct SC_kevent_params {
+    int kq;
+    const struct kevent* changelist;
+    int nchanges;
+    struct kevent* eventlist;
+    int nevents;
+    const struct timespec* timeout;
 };
 
 void initialize();
