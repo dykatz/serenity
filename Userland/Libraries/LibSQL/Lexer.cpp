@@ -10,7 +10,7 @@
 
 namespace SQL {
 
-HashMap<String, TokenType> Lexer::s_keywords;
+HashMap<String, TokenType, CaseInsensitiveStringTraits> Lexer::s_keywords;
 HashMap<char, TokenType> Lexer::s_one_char_tokens;
 HashMap<String, TokenType> Lexer::s_two_char_tokens;
 

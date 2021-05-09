@@ -42,7 +42,7 @@ private:
     bool is_line_break() const;
     bool is_eof() const;
 
-    static HashMap<String, TokenType> s_keywords;
+    static HashMap<String, TokenType, CaseInsensitiveStringTraits> s_keywords;
     static HashMap<char, TokenType> s_one_char_tokens;
     static HashMap<String, TokenType> s_two_char_tokens;
 
